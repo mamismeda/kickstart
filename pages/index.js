@@ -10,19 +10,28 @@ class CampaignIndex extends Component {
   }
 
   renderCampaigns() {
-    const items = this.props.campaigns.map(address => {
+    const items = this.props.campaigns.map((address) => {
       return {
         header: address,
         description: <a>View Campaign</a>,
-        fluid: true
-      }
+        fluid: true,
+      };
     });
 
-    return <Card.Group items={items} />
+    return <Card.Group items={items} />;
   }
 
   render() {
-    return <div>{this.renderCampaigns()}</div>;
+    return (
+      <div>
+        <link
+          async
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
+        />
+        {this.renderCampaigns()}
+      </div>
+    );
   }
 }
 
