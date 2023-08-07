@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Layout from "../../components/layout";
 
 class CampaignShow extends Component {
+  static async getInitialProps(props) {
+    props.query.address;
+  }
+
   render() {
     return (
       <Layout>
