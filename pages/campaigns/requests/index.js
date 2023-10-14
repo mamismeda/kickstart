@@ -27,6 +27,7 @@ class RequestIndex extends Component {
       return (
         <RequestRow
           key={index}
+          id={index}
           request={request}
           address={this.props.address}
         />
@@ -35,7 +36,7 @@ class RequestIndex extends Component {
   }
 
   render() {
-    const { Header, Row, HeaderCell, Body } = Table;
+    const { Header, Row, HeaderCell,Body } = Table;
     return (
       <Layout>
         <h3>requests</h3>
